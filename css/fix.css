@@ -1,0 +1,79 @@
+center {
+  width: 100%; 
+  background-color: #f1f1f1;
+}
+.email-container {
+  max-width: 600px; 
+  margin: 0 auto;
+}
+.one {
+  margin: auto;
+}
+.bg_white {
+  padding: 1em 2.5em 0 2.5em;
+}
+.logo {
+  text-align: left;
+}
+.hero {
+  padding: 2em 0 2em 0;
+}
+.two {
+  padding: 0 2.5em;
+  text-align: left;
+}
+.three {
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
+.four {
+  text-align: left; 
+  padding: 0 2.5em; 
+  color: #000; 
+  padding-bottom: 20px;
+  width: 80%;
+}
+.five {
+  text-align: right; 
+  padding: 0 2.5em;
+  color: #000; 
+  padding-bottom: 20px;
+}
+.six {
+  border-bottom: 1px solid rgba(0,0,0,.05);
+}
+.six-td {
+  text-align: left; 
+  padding: 0 2.5em;
+}
+.six-img {
+  width: 100px; 
+  max-width: 600px; 
+  height: auto; 
+  margin-bottom: 20px; 
+  display: block;
+}
+.price {
+  color: #000; 
+  font-size: 20px;
+}
+.tr-btn {
+  text-align: center;
+  padding: 1em 2.5em;
+}
+.reset {
+  border-spacing: 0;
+  padding: 0;
+  width: 100%;
+}
+.w-one {
+  width: 80%;
+}
+.w-two {
+  width: 20%;
+}
+.valign {
+  vertical-align: middle;
+}
+.valign-top {
+  vertical-align: top;
+}
