@@ -55,7 +55,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   transition: .2s;
-  margin: 0 auto;
+  margin: 12px auto;
   margin-left: 166px;
 }
 .contact_form button:hover {
@@ -75,7 +75,4 @@ input:valid:not(:placeholder-shown) {
 .check {
   width: 25px;
   height: 20px;
-}
-.submit {
-  margin-top: 12px;
 }
