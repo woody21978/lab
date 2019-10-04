@@ -76,6 +76,6 @@ input:valid:not(:placeholder-shown) {
   width: 25px;
   height: 20px;
 }
-.btn {
+.submit {
   margin-top: 12px;
 }
