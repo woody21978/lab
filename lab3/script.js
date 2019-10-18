@@ -58,9 +58,8 @@ window.onload = () => {
     let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
     let diff = tomorrow - now;
     console.log(Math.round(diff / 1000));
-    // spanNumber[17].className = 'current';
-    // spanNumber[19-2].classList.remove('current');
-    // spanNumber[17+1].className = 'current';;
+    // spanNumber[19].className = 'current';
+    // spanNumber[19-1].classList.remove('current');
     setInterval(function(){
       let day = now.getDate();
       spanNumber[day-1].classList.remove('current');
