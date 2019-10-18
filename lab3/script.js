@@ -58,10 +58,13 @@ window.onload = () => {
     let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
     let diff = tomorrow - now;
     console.log(Math.round(diff / 1000));
-    setTimeout(function(){
+    // spanNumber[17].className = 'current';
+    // spanNumber[19-2].classList.remove('current');
+    // spanNumber[17+1].className = 'current';;
+    setInterval(function(){
       let day = now.getDate();
-      spanNumber[day-2].classList.remove('current');
-      spanNumber[day-1].className = 'current';
+      spanNumber[day-1].classList.remove('current');
+      spanNumber[day].className = 'current';
     }, Math.round(diff / 1000));
   }
   getSecondsToTomorrow();
