@@ -1,54 +1,53 @@
 window.onload = () => {
-  let content = document.querySelector('.content'),
+  let calendar = document.querySelector('.calendar'),
     title = document.querySelector('h1'),
     nameDay = document.querySelectorAll('.day p');
     numberDay = document.querySelectorAll('.day-number p'),
-    dayOff = document.querySelectorAll('.day-off'),
+    dayOff = document.querySelectorAll('.weekend-day'),
     btntext = document.querySelector('.accordion span'),
     spanNumber = document.querySelectorAll('.day-number p span'),
     checkbox = document.querySelector('.checkbox');
     console.log(spanNumber);
   checkbox.addEventListener('change', () => {
     if (checkbox.checked) {
-      content.style.background = '#333';
-      title.style.color = '#fff';
+      calendar.classList.add('dark-calendar');
+      title.classList.add('dark-title');
       for(i = 0; i < nameDay.length; i++) {
-        nameDay[i].style.color = '#fff';
+        nameDay[i].classList.add('dark-day')
         if (i === 5 || i === 6) {
-          nameDay[i].style.color = '#6b6868';
+          nameDay[i].classList.add('dark-weekends');
         }
       }
       for(j = 0; j < numberDay.length; j++) {
-        numberDay[j].style.color = '#fff';
-        if (j > 30) {
-          numberDay[j].style.color = '#a2a0a0';
+        numberDay[j].classList.add('dark-day-number');
+        if (j === 0 || j > 31) {
+          numberDay[j].classList.add('dark-next-month');
         }
       }
       for(k = 0; k < dayOff.length; k++) {
-        dayOff[k].style.background = '#6b6868';
+        dayOff[k].classList.add('dark-weekend-day');
       }
       btntext.innerHTML = 'Dark';
     } else {
-      content.style.background = '#fff';
-      title.style.color = '#000';
+      calendar.classList.remove('dark-calendar');
+      title.classList.remove('dark-title');
       for(k = 0; k < dayOff.length; k++) {
-        dayOff[k].style.background = '#f5f5f5';
-        // dayOff[k].style.color = '#98928F !important';
+        dayOff[k].classList.remove('dark-weekend-day');
       }
       for(i = 0; i < nameDay.length; i++) {
-        nameDay[i].style.color = '#000';
+        nameDay[i].classList.remove('dark-day')
         if (i === 5 || i === 6) {
-          nameDay[i].style.color = '#C2C2C2';
+          nameDay[i].classList.remove('dark-weekends');
         }
       }
       for(j = 0; j < numberDay.length; j++) {
-        numberDay[j].style.color = '#000';
-        if (j > 30) {
-          numberDay[j].style.color = '#c2c2c2';
+        numberDay[j].classList.remove('dark-day-number');
+        if (j === 0 || j > 30) {
+          numberDay[j].classList.remove('dark-next-month');
         }
-        if (j === 5 || j === 6 || j === 12 || j === 13 || j === 19 || j === 20 || j === 26 || j === 27) {
-          numberDay[j].style.color = '#98928f';
-        }
+        // if (j === 5 || j === 6 || j === 12 || j === 13 || j === 19 || j === 20 || j === 26 || j === 27) {
+        //   numberDay[j].style.color = '#98928f';
+        // }
       }
       btntext.innerHTML = 'Light';
     } 
