@@ -4,8 +4,10 @@ window.onload = () => {
     nameDay = document.querySelectorAll('.day p');
     numberDay = document.querySelectorAll('.day-number p'),
     dayOff = document.querySelectorAll('.day-off'),
-    btntext = document.querySelector('.accordion span');
+    btntext = document.querySelector('.accordion span'),
+    spanNumber = document.querySelectorAll('.day-number p span'),
     checkbox = document.querySelector('.checkbox');
+    console.log(spanNumber);
   checkbox.addEventListener('change', () => {
     if (checkbox.checked) {
       content.style.background = '#333';
@@ -51,4 +53,16 @@ window.onload = () => {
       btntext.innerHTML = 'Light';
     } 
   });
+  function getSecondsToTomorrow() {
+    let now = new Date();
+    let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
+    let diff = tomorrow - now;
+    console.log(Math.round(diff / 1000));
+    setTimeout(function(){
+      let day = now.getDate();
+      spanNumber[day-2].classList.remove('current');
+      spanNumber[day-1].className = 'current';
+    }, Math.round(diff / 1000));
+  }
+  getSecondsToTomorrow();
 }
