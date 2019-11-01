@@ -76,25 +76,22 @@ h1 span {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   background: lime;
-  padding: 7px;
+  padding: 5px 10px;
   font-weight: 700;
+}
+.day-number b {
+  margin-right: 40px;
 }
 /*Dark*/
 .dark-calendar {
   background: #333;
 }
-.dark-title {
+.dark-calendar h1, .dark-calendar .day p, .dark-calendar .day-number p {
   color: #fff;
 }
-.dark-day, .dark-day-number {
-  color: #fff;
-}
-.dark-weekends {
-  color: #6b6868;
-}
-.dark-next-month {
-  color: #a2a0a0;
-}
-.dark-weekend-day {
+.dark-calendar .weekend-day {
   background: #6b6868;
+}
+.dark-calendar .next-month p, .dark-calendar .weekends p {
+  color: #a2a0a0;
 }
