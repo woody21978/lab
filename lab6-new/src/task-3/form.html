@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Регистрация</title>
+  <link rel="stylesheet" type="text/css" href="css/form.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="container">
+      <form action="#" class="form">
+        <span class="form-title">Регистрация</span>
+        <div class="form-input">
+          <input class="form-input_item fio" type="name" placeholder="ФИО">
+          <p class="form-input_desc">Пример: Соловьёв Артём Ярославович</p>
+          <span class="form-input_error-fio"></span>
+        </div>
+        <div class="form-input">
+          <input class="form-input_item password" type="password" placeholder="Пароль">
+          <p class="form-input_desc">Мин.символов пароля: 6 | Латинские символы</p>
+          <span class="form-input_error-password"></span>
+        </div>
+        <div class="form-input">
+          <input class="form-input_item email" type="email" placeholder="email@mail.ru">
+          <p class="form-input_desc">name@hostname.domain</p>
+          <span class="form-input_error-email"></span>
+        </div>
+        <div class="form-input city">
+          <select class="city-select">
+            <option value="none" selected="1">Выберите город</option>
+            <option>Москва</option>
+            <option>Санкт-Петербург</option>
+            <option>Йошкар-Ола</option>
+          </select>
+          <span class="form-input_error-city"></span>
+        </div>
+          <button class="btn">Зарегистрироваться</button>
+      </form>
+    </div>
+  </div>
+<script src="js/form.js"></script>
+</body>
+</html>

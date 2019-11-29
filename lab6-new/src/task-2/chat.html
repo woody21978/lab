@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat</title>
+  <link rel="stylesheet" type="text/css" href="css/chat.css">
+</head>
+<body>
+  <div class="container">
+    <div class="wrap">
+      <div class="dialog">
+        <div class="message-block">
+          <div class="message-block_avatar"></div>
+          <div class="message-block_item">
+            <p>Привет ^-^</p>
+          </div>
+        </div>
+        <div class="message-block message-block__me">
+          <div class="message-block_avatar message-block_avatar__me"></div>
+          <div class="message-block_item message-block_item__me">
+            <p>Салам
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="send-block">
+      <textarea type="text" placeholder="Сообщение..." class="message"></textarea>
+      <input type="submit" class="message-btn">
+      <input type="checkbox" class="send-block_checkbox">
+      <span class="name">Dog</span>
+      <!-- <button class="send-block_select">Cat</button> -->
+    </div>
+  </div>
+  <div class="alert_fail">
+    <p>Текст не может быть пустым... :(</p>
+  </div>
+<script src="js/chat.js"></script>
+</body>
+</html>
