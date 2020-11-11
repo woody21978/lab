@@ -1,9 +1,9 @@
-import React from "react";
-import "./css/App.scss";
-import Home from "./pages/Home.jsx";
-import About from "./pages/About.jsx";
-import Contact from "./pages/Contact.jsx";
-import { Switch, Route, BrowserRouter, Redirect } from "react-router-dom";
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import React from 'react';
+import './css/App.scss';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
 export default function App() {
   return (
@@ -13,7 +13,6 @@ export default function App() {
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
-          {/* <Redirect to="/home" /> */}
         </Switch>
       </BrowserRouter>
     </div>

@@ -1,9 +1,9 @@
-import { store } from "@risingstack/react-easy-state";
+import { store } from '@risingstack/react-easy-state';
 
 const state = store({
   burgerMenu: {
-    active: false
-  }
+    active: false,
+  },
 });
 
 export default state;

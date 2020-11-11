@@ -1,6 +1,6 @@
-import React from "react";
-import "../css/App.scss";
-import Menu from "../components/menu/Menu.jsx";
+import React from 'react';
+import '../css/App.scss';
+import Menu from '../components/menu/Menu';
 function About() {
   return (
     <div className="wrapper">
