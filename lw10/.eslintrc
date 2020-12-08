@@ -1,7 +1,21 @@
 {
-  "extends": ["react-app", "prettier"],
-  "rules": {
-    "jsx-quotes": [1, "prefer-double"]
-  },
-  "plugins": ["prettier"]
+	"env": {
+		"browser": true
+	},
+	"extends": ["airbnb", "prettier"],
+	"plugins": ["prettier"],
+	"rules": {
+		"prettier/prettier": [
+			"error",
+			{
+				"endOfLine": "auto"
+			}
+		],
+		"jsx-quotes": [1, "prefer-double"],
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		"no-tabs": 0,
+		"react/prop-types": 0,
+		"react/jsx-indent": [2, "tab"],
+		"react/jsx-indent-props": [2, "tab"]
+	}
 }

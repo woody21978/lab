@@ -1,8 +1,8 @@
 import React from 'react';
 import { view } from '@risingstack/react-easy-state';
-import state from '../../store.js';
+import state from '../../store';
 import './Search.scss';
-import requestApi from '../../action/getGifs.js';
+import requestApi from '../../action/getGifs';
 
 function Search() {
 	function changeSearch(e) {

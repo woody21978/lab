@@ -1,6 +1,7 @@
+import React from 'react';
 import './css/App.scss';
-import GiphyList from './components/GiphyList/GiphyList.jsx';
-import Search from './components/Search/Search.jsx';
+import GiphyList from './components/GiphyList/GiphyList';
+import Search from './components/Search/Search';
 
 function App() {
 	return (

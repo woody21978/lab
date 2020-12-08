@@ -1,6 +1,6 @@
 // import { view } from '@risingstack/react-easy-state';
-import state from '../../store.js';
-import requestApi from '../../action/getGifs.js';
+import state from '../../store';
+import requestApi from '../../action/getGifs';
 
 export default function InfiniteScroll(event) {
 	if (
@@ -8,7 +8,6 @@ export default function InfiniteScroll(event) {
 		event.target.clientHeight + 1
 	) {
 		state.offset += state.limit;
-		state.countGifs = state.gifs.length;
 		(async () => {
 			await requestApi(state.q, state.limit, state.offset);
 		})();

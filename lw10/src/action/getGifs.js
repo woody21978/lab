@@ -1,6 +1,7 @@
-import state from '../store.js';
+import state from '../store';
+
 async function requestApi(nameGif, limit, offset) {
-	let url = new URL(
+	const url = new URL(
 		'https://api.giphy.com/v1/gifs/search?api_key=FjKcR8w3kgQZ7xvrPlk1TDncvJXJtI1a&rating=g&lang=ru'
 	);
 	url.searchParams.append('q', nameGif);
@@ -9,21 +10,20 @@ async function requestApi(nameGif, limit, offset) {
 	const response = await fetch(url);
 	if (response.ok && response.status === 200) {
 		const json = await response.json();
-		const data = json.data;
-		for (let i = 0; i < data.length; i++) {
-			const data_gif = {};
-			for (let key in data[i]) {
-				data_gif.url = data[i]['url'];
-				data_gif.title = data[i]['title'];
-				data_gif.img = data[i]['images']['downsized']['url'];
-				data_gif.width = data[i]['images']['downsized']['width'];
-				data_gif.height = data[i]['images']['downsized']['height'];
-			}
-			state.gifs.push(data_gif);
+		const { data } = json;
+		for (let i = 0; i < data.length; i += 1) {
+			const dataGif = {};
+			Object.keys(data[i]).forEach(function getData() {
+				dataGif.url = this.url;
+				dataGif.title = this.title;
+				dataGif.img = this.images.downsized.url;
+				dataGif.width = this.images.downsized.width;
+				dataGif.height = this.images.downsized.height;
+			}, data[i]);
+			state.gifs.push(dataGif);
 		}
-		return;
 	} else {
-		alert('Ошибка HTTP: ' + response.status);
+		console.log(`Ошибка HTTP: ${response.status}`);
 	}
 }
 
