@@ -1,6 +1,7 @@
 import React from 'react';
 import { view } from '@risingstack/react-easy-state';
 import './GiphyListItem.scss';
+// import PropTypes from 'prop-types';
 
 function GiphyListItem(props) {
   const { img, url, title, style } = props;
@@ -18,5 +19,12 @@ function GiphyListItem(props) {
     </div>
   );
 }
+
+// GiphyListItem.PropTypes = {
+//   img: PropTypes.string.isRequired,
+//   url: PropTypes.string.isRequired,
+//   title: PropTypes.string.isRequired,
+//   style: PropTypes.object.isRequired,
+// };
 
 export default view(GiphyListItem);
