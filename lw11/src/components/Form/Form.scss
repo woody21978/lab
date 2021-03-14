@@ -1,0 +1,21 @@
+.form {
+  width: 60%;
+  margin: auto;
+
+  &-block {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__input,
+  &__select {
+    box-sizing: border-box;
+    width: 100%;
+    outline: 0;
+    padding: 10px;
+    border: 1px solid #e3e6f0;
+    border-radius: 5px;
+  }
+}

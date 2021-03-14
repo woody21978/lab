@@ -1,0 +1,30 @@
+@import '../../css/fonts.scss';
+@import '../../css/colors.scss';
+body {
+  background: $bg-ligth;
+  font-family: $Roboto;
+  color: $dark;
+}
+
+.container {
+  max-width: 991px;
+  width: 100%;
+  min-height: 400px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+  }
+}

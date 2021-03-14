@@ -1,0 +1,32 @@
+@import '../../css/colors';
+.table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: separate;
+  box-sizing: border-box;
+  background: $light;
+  border: 1px solid $gray;
+  box-shadow: 0 0.15rem 1.75rem 0 $gray;
+
+  th,
+  td {
+    box-sizing: border-box;
+    width: calc(100% / 4);
+    padding: 0.75rem;
+    border: 1px solid $gray;
+    border-left-width: 0;
+    border-top-width: 0;
+    text-align: center;
+  }
+
+  td {
+    color: #858796;
+    font-weight: 300;
+  }
+
+  th {
+    border-bottom-width: 2px;
+    color: #5a5c69;
+    font-weight: 500;
+  }
+}
