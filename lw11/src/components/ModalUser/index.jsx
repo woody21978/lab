@@ -90,6 +90,7 @@ const ModalUser = ({
             name="status"
             value={values.status}
             onChange={handleChange}
+            onBlur={handleBlur}
           >
             <option>Выберите статус</option>
             <option value={1}>Активный</option>

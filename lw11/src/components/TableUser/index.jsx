@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -20,7 +21,7 @@ const TableUser = ({ users }) => (
         {users.length > 0 ? (
           <tbody>
             {users.map((user) => (
-              <tr key={1}>
+              <tr key={uuidv4()}>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
                 <td>{user.role ? 'Админ' : 'Пользователь'}</td>
@@ -46,8 +47,8 @@ TableUser.propTypes = {
       id: PropTypes.number,
       name: PropTypes.string,
       email: PropTypes.string,
-      role: PropTypes.number,
-      status: PropTypes.number,
+      role: PropTypes.string,
+      status: PropTypes.string,
     })
   ),
 };

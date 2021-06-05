@@ -6,6 +6,6 @@ export const validateFormUser = () =>
     email: Yup.string()
       .email('Неверный формат Email')
       .required('Заполните поле'),
-    role: Yup.bool().required('Заполните поле'),
-    status: Yup.bool().required('Заполните поле'),
+    role: Yup.string().required('Заполните поле'),
+    status: Yup.string().required('Заполните поле'),
   });
